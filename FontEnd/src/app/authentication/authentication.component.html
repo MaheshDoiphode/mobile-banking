@@ -1,0 +1,37 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <!-- Navbar content -->
+    <app-navigation></app-navigation>
+</nav>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ng-container *ngIf="isLoginPage || isSignUpPage">
+          <div class="left-card hide-on-mobile" *ngIf="isLoginPage">
+            <app-content></app-content>
+           
+          </div>
+          <div class="right-card" *ngIf="isSignUpPage">
+            <router-outlet></router-outlet>
+            
+          </div>
+        </ng-container>
+      </div>
+      <div class="col-md-6">
+        <mat-card class="example-card">
+          <mat-card-content>
+            <div class="authentication-container">
+              <div class="form-card">
+                <ng-container *ngIf="isLoginPage">
+                  <router-outlet></router-outlet>
+                </ng-container>
+                <ng-container *ngIf="isSignUpPage" class="hide-on-mobile">
+                  <app-content></app-content>
+                </ng-container>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

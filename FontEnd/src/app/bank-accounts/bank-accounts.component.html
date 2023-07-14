@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="text-center mt-4">Bank Accounts</h2>
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let account of bankAccounts">
+      <mat-card class="mt-4 custom-card">
+        <mat-card-header>
+          <mat-card-title>{{ account.bankName }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="card-text">Account Number: {{ account.accountNumber }}</p>
+          <p class="card-text">Balance: {{ account.balance }}</p>
+          <p class="card-text">Account Type: {{ account.accountType }}</p>
+          <p class="card-text">IFSC Code: {{ account.ifscCode }}</p>
+          <p class="card-text">Branch Address: {{ account.branchAddress }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

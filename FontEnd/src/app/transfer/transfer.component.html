@@ -1,0 +1,48 @@
+<div>
+  <!-- <div class="w-50 pr-3">
+    <app-bank-accounts class="custom-bank-accounts"></app-bank-accounts>
+  </div> -->
+  <div class="w-50">
+    <h2>Transfer Form</h2>
+    <div class="transfer-container">
+      <form (ngSubmit)="submitTransferForm()" #transferForm="ngForm" class="shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="form-group">
+          <label for="senderId">Sender ID:</label>
+          <input type="text" id="senderId" name="senderId" [(ngModel)]="transferData.senderId" required
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="accountNumber">Account Number:</label>
+          <input type="text" id="accountNumber" name="accountNumber" [(ngModel)]="transferData.accountNumber" required
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" [(ngModel)]="transferData.amount" required
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="ifscCode">IFSC Code:</label>
+          <input type="text" id="ifscCode" name="ifscCode" [(ngModel)]="transferData.ifscCode" required
+            class="form-control">
+        </div>
+
+        <div class="form-group" style="padding-bottom: 30px;">
+          <label for="paymentType">Payment Type:</label>
+          <select id="paymentType" name="paymentType" [(ngModel)]="transferData.paymentType" required
+            class="form-control">
+            <option value="upi">UPI</option>
+            <option value="rtgs">RTGS</option>
+            <option value="imps">IMPS</option>
+            <option value="neft">NEFT</option>
+          </select>
+        </div>
+
+        <button type="submit" [disabled]="!transferForm.valid" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .panel-body {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .input-field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+  
+  .input-field.error {
+    border: 1px solid #ff0000;
+  }
+  
+  .fancy-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fancy-input input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .fancy-button {
+    margin-left: 10px;
+  }
+  
+  .fr {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .forget {
+    margin-top: 20px;
+  }
+  
+  .bordert {
+    border-top: 1px solid #f2f2f2;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .font-weight-bold {
+    font-weight: bold;
+  }
+  
+  .text-muted {
+    color: #999999;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #f4623a;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  .outer{
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+    
+}
+
+.panel-heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forget{
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.hover{
+    text-decoration: none;
+}
+
+.form-inline label{
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.btn{
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.panel{
+    min-height: 380px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 12px;
+    margin-top: 100px;
+}
+
+.input-field{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #4343ff;
+}
+
+.input-field.error{
+    border: 1px solid red;
+    color: red;
+}
+
+input[type='text'], input[type='password']{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.fa-eye-slash.btn{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bordert{
+    border-top: 1px solid #aaa;
+    position: relative;
+}
+
+.bordert:after{
+    content: "or connect with";
+    position: absolute;
+    top: -15px;
+    left: 150px;
+    background-color: #fff;
+    padding: 0 8px;
+}
+

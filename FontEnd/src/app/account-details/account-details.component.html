@@ -1,0 +1,79 @@
+<mat-card class="form-card">
+  <mat-card-header>
+    <mat-card-title>User Information</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="accountDetailsForm" (ngSubmit)="onSubmit()" class="form">
+      <div class="profile-picture">
+        <img [src]="user.profilePhoto" alt="Profile Picture" (click)="fileInput.click()">
+        <input type="file" #fileInput style="display: none" (change)="onFileSelect($event)" accept="image/*" />
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" placeholder="Name">
+          <mat-error *ngIf="accountDetailsForm.controls['name'].invalid && accountDetailsForm.controls['name'].touched">
+            Name is required!
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-error
+            *ngIf="accountDetailsForm.controls['email'].invalid && accountDetailsForm.controls['email'].touched">
+            Email is required!
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phoneNumber" placeholder="Phone Number">
+          <mat-error
+            *ngIf="accountDetailsForm.controls['phoneNumber'].invalid && accountDetailsForm.controls['phoneNumber'].touched">
+            Please enter a valid phone number!
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Gender</mat-label>
+          <input matInput formControlName="gender" placeholder="Gender">
+          <mat-error
+            *ngIf="accountDetailsForm.controls['gender'].invalid && accountDetailsForm.controls['gender'].touched">
+            Gender is required!
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address" placeholder="Address">
+          <mat-error
+            *ngIf="accountDetailsForm.controls['address'].invalid && accountDetailsForm.controls['address'].touched">
+            Address is required!
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="dobPicker" formControlName="dateOfBirth" placeholder="Date of Birth">
+          <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+          <mat-datepicker #dobPicker></mat-datepicker>
+          <mat-error
+            *ngIf="accountDetailsForm.controls['dateOfBirth'].invalid && accountDetailsForm.controls['dateOfBirth'].touched">
+            Date of Birth is required!
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Nationality</mat-label>
+          <input matInput formControlName="nationality" placeholder="Nationality">
+          <mat-error
+            *ngIf="accountDetailsForm.controls['nationality'].invalid && accountDetailsForm.controls['nationality'].touched">
+            Nationality is required!
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button class="submit-button" type="submit">Submit</button>
+    </form>
+  </mat-card-content>
+</mat-card>

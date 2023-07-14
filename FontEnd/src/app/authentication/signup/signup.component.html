@@ -1,0 +1,200 @@
+<!-- <div class="panel-heading" style="margin-top: -30px;">
+  <h3 class="pt-3 font-weight-bold" style="color: #f4623a;">Sign Up</h3>
+</div>
+<div class="panel-body p-1">
+  <form [formGroup]="signupForm">
+    <div class="form-group pt-3">
+      <div class="input-field"
+        [class.error]="signupForm.controls['name'].dirty && signupForm.hasError('required','name')">
+        <span class="fa fa-user p-2" style="color: #f4623a;"></span>
+        <input formControlName="name" type="text" placeholder="Name">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field"
+        [class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">
+        <span class="fa fa-envelope p-2" style="color: #f4623a;"></span>
+        <input formControlName="email" type="email" placeholder="Email Id">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field"
+        [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
+        <span class="fa fa-lock p-2" style="color: #f4623a;"></span>
+        <input [type]="type" formControlName="password" placeholder="Password">
+        <span (click)="hideShowPass()" class="fa {{eyeIcon}}" style="color: #f4623a;"></span>
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field"
+        [class.error]="signupForm.controls['phoneNumber'].dirty && signupForm.hasError('required','phoneNumber')">
+        <span class="fa fa-phone p-2" style="color: #f4623a;"></span>
+        <input formControlName="phoneNumber" type="tel" placeholder="Phone Number">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field"
+        [class.error]="signupForm.controls['address'].dirty && signupForm.hasError('required','address')">
+        <span class="fa fa-home p-2" style="color: #f4623a;"></span>
+        <input formControlName="address" type="text" placeholder="Address">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field"
+        [class.error]="signupForm.controls['dateOfBirth'].dirty && signupForm.hasError('required','dateOfBirth')">
+        <span class="fa fa-calendar p-2" style="color: #f4623a;"></span>
+        <input formControlName="dateOfBirth" type="date" placeholder="Date Of Birth" value="2000-01-01">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-user p-2" style="color: #f4623a;"></span>
+        <label class="px-2">Gender:</label>
+
+        <div class="custom-control custom-radio px-2">
+          <input type="radio" id="male" value="M" name="gender" formControlName="gender" checked>
+          <label>Male</label>
+        </div>
+        <div class="custom-control custom-radio px-2">
+          <input type="radio" id="female" value="F" name="gender" formControlName="gender">
+          <label>Female</label>
+        </div>
+        <div class="custom-control custom-radio px-2">
+          <input type="radio" id="other" value="O" name="gender" formControlName="gender">
+          <label>Other</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-globe p-2" style="color: #f4623a;"></span>
+        <select formControlName="nationality" placeholder="Nationality">
+          <option value="" disabled>Select Nationality</option>
+          <option value="india" selected>India</option>
+          <option value="usa">United States</option>
+          <option value="canada">Canada</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Profile Photo</label>
+      <br>
+      <input type="file" (change)="onProfilePhotoSelected($event)" accept="image/*">
+    </div>
+
+    <input type="hidden" formControlName="profilePhotoData" [value]="profilePhotoData">
+
+    <button (click)="onSignUp()" type="submit" class="btn btn-primary btn-block mt-4 w-100"
+      style="background-color: #f4623a;" [disabled]="!formInitialized">
+      Sign Up
+    </button>
+
+
+    <div class="text-center pt-4 text-muted">
+      Already have an account?
+      <a id="forget" routerLink="../login" class="font-weight-bold" style="color: #f4623a;">Login</a>
+    </div>
+  </form>
+</div> -->
+
+
+<div class="panel-heading" style="margin-top: -30px;">
+  <h3 class="pt-3 font-weight-bold" style="color: #f4623a;">Sign Up</h3>
+</div>
+<div class="panel-body p-1">
+  <form [formGroup]="signupForm">
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-user p-2" style="color: #f4623a;"></span>
+        <input formControlName="name" type="text" placeholder="Name">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-envelope p-2" style="color: #f4623a;"></span>
+        <input formControlName="email" type="email" placeholder="Email Id">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-lock p-2" style="color: #f4623a;"></span>
+        <input [type]="type" formControlName="password" placeholder="Password">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-phone p-2" style="color: #f4623a;"></span>
+        <input formControlName="phoneNumber" type="tel" placeholder="Phone Number">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-home p-2" style="color: #f4623a;"></span>
+        <input formControlName="address" type="text" placeholder="Address">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-calendar p-2" style="color: #f4623a;"></span>
+        <input formControlName="dateOfBirth" type="date" placeholder="Date Of Birth" value="2000-01-01">
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <span class="fa fa-user p-2" style="color: #f4623a;"></span>
+        <label class="px-2">Gender:</label>
+
+        <div class="custom-control custom-radio px-2">
+          <input type="radio" id="male" value="Male" name="gender" formControlName="gender" checked>
+          <label>Male</label>
+        </div>
+        <div class="custom-control custom-radio px-2">
+          <input type="radio" id="female" value="Female" name="gender" formControlName="gender">
+          <label>Female</label>
+        </div>
+        <div class="custom-control custom-radio px-2">
+          <input type="radio" id="other" value="Other" name="gender" formControlName="gender">
+          <label>Other</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group pt-3">
+      <div class="input-field">
+        <input type="hidden" formControlName="nationality">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Profile Photo</label>
+      <br>
+      <input type="file" (change)="onProfilePhotoSelected($event)" accept="image/*">
+    </div>
+    
+    <input type="hidden" formControlName="profilePhotoData" value="{{profilePhoto}}">
+    
+    <button (click)="onSignUp()" type="submit" class="btn btn-primary btn-block mt-4 w-100" style="background-color: #f4623a;">
+      Sign Up
+    </button>
+    
+
+    <div class="text-center pt-4 text-muted">
+      Already have an account?
+      <a id="forget" routerLink="../login" class="font-weight-bold" style="color: #f4623a;">Login</a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+
+
+.example-card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .authentication-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .left-card,
+  .right-card {
+    flex-grow: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-card {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+  
+  

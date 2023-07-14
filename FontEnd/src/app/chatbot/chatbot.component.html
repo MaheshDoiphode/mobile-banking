@@ -1,0 +1,18 @@
+<div class="chatbot-dialog mat-elevation-z2" [class.active]="dialogActive">
+    <div class="dialog-header">
+      <span class="dialog-title">Chatbot</span>
+      <button class="close-button" (click)="toggleChatbot()">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="dialog-content" #dialogContent>
+      <div *ngFor="let message of messages" class="message" [ngClass]="message.sender" #message>
+        {{ message.text }}
+      </div>      
+    </div>
+    <div class="input-container">
+      <input #userInput type="text" class="form-control" placeholder="Type your message..." (keyup.enter)="sendMessage(userInput.value); userInput.value=''">
+      <button class="btn btn-primary" (click)="sendMessage(userInput.value); userInput.value=''">Send</button>
+    </div>
+  </div>
+  

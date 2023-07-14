@@ -1,0 +1,46 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 767px) {
+    .col-md-custom,
+    .offset-md-custom {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .col-md-custom {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  
+  .offset-md-custom {
+    margin-left: 25%;
+  }
+  
+  #mainNav {
+    height: 10%; /* Set the height of the navbar to 10% */
+  }
+
+
+
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .example-container {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+  

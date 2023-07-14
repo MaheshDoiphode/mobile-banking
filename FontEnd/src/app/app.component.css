@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    position: relative;
+  }
+  
+  :host /deep/ .floating-icon {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: move;
+    z-index: 1000;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: all 0.3s;
+  }
+  
+  :host /deep/ .floating-icon:hover {
+    background-color: #0056b3;
+  }
+  
+  :host /deep/ .chatbot-dialog {
+    width: 400px;
+    max-height: calc(100vh - 80px);
+  }
+  

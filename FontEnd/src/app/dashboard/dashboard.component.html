@@ -1,0 +1,49 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <!-- Navbar content -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3" id="mainNav" style="background-color: #f4623a">
+        <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="#page-top">Banking App</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+              
+                <!-- List 1 (specific to the dashboard component) -->
+                <li class="nav-item"><a class="nav-link" href="#other">Other Link</a></li>
+                <li class="nav-item"><a class="nav-link" href="#another">Another Link</a></li>
+                <!-- Dropdown for additional options (visible only on mobile screens) -->
+                <li class="nav-item d-lg-none dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">More Options</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: black; border: none; border-radius: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);">
+                      <li><a class="dropdown-item" routerLink="/dashboard/dashboard-main-content" style="color: white; font-weight: bold;">Dashboard</a></li>
+                      <li><a class="dropdown-item" routerLink="/dashboard/transaction" style="color: white;">Transfer Money</a></li>
+                      <li><a class="dropdown-item" routerLink="/dashboard/transaction-history" style="color: white;">Transactions</a></li>
+                      <li><a class="dropdown-item" routerLink="/dashboard/bank-accounts" style="color: white;">Bank Accounts</a></li>
+                    </ul>
+                  </li>
+                  
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 position-fixed" style="height: 100vh;">
+            <!-- Fixed side panel -->
+            <app-dashboard-left-panel></app-dashboard-left-panel>
+        </div>
+        <div class="col-md-10 offset-md-2" style="padding-top: 16px; padding-bottom: 30px;">
+
+            <!-- Main Section starts-->
+            <router-outlet>  </router-outlet>
+            <!-- Main Section ends-->
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

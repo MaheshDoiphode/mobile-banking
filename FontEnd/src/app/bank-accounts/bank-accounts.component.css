@@ -1,0 +1,29 @@
+.custom-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .custom-card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-card mat-card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .custom-card mat-card-content {
+    padding: 16px;
+  }
+  
+  .custom-card p.card-text {
+    margin-bottom: 8px;
+  }
+  
+  .custom-card:last-child {
+    margin-bottom: 0;
+  }
+  
